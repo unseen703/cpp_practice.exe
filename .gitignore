@@ -1,0 +1,7 @@
+.cph/
+*.exe
+*.bin
+.vscode/
+*.prob
+*.txt
+*.json
