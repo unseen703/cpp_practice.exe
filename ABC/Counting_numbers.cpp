@@ -42,9 +42,16 @@ long long fun(string &s ,int i, int pre, long long a, int lz, int tight)
   long long ans = 0;
   for (int d = 0; d <= lt; d++)
   {
-      if( lz  == 0 && d == pre)continue;
+      // if( lz  == 0 && d == pre)continue;
   
-      ans += fun(s,i +1, d, a, ((d == 0) && lz) , (tight && (d == lt)));
+  if(d== 0 && lz == 1){
+
+      ans += fun(s,i +1, d, a, 1 , (tight && (d == lt)));
+  }
+  else if( d != pre){
+
+      ans += fun(s,i +1, d, a, 0 , (tight && (d == lt)));
+  }
 
       // ans += fun(s,i - 1, d, a, 0, );
 
